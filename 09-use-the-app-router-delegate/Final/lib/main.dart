@@ -27,11 +27,10 @@
 // THE SOFTWARE.
 
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'router/app_state_manager.dart';
 import 'router/book_router_delegate.dart';
 import 'helpers/book_data.dart';
-
-
 
 void main() {
   // Add Path Url Strategy to remove # from Url
@@ -46,18 +45,15 @@ class Book extends StatefulWidget {
 }
 
 class _BookState extends State<Book> {
-
-    final _bookManager = BookManager();
-    final _appStateManager = AppStateManager();
+  final _bookManager = BookManager();
+  final _appStateManager = AppStateManager();
   // TODO: Initialise Router Parser
-    late final BookRouterDelegate _bookRouterDelegate;
-
-
+  late final BookRouterDelegate _bookRouterDelegate;
 
   @override
   void initState() {
     super.initState();
-  _bookRouterDelegate = BookRouterDelegate(
+    _bookRouterDelegate = BookRouterDelegate(
         appStateManager: _appStateManager, bookManager: _bookManager);
   }
 
@@ -70,8 +66,8 @@ class _BookState extends State<Book> {
           ChangeNotifierProvider(create: (context) => _appStateManager),
         ],
         child: MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Router(routerDelegate: _bookRouterDelegate),
-    ));
+          debugShowCheckedModeBanner: false,
+          home: Router(routerDelegate: _bookRouterDelegate),
+        ));
   }
 }

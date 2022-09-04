@@ -27,11 +27,10 @@
 // THE SOFTWARE.
 
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import '../helpers/constants.dart';
 import '../helpers/helper_function.dart';
-
-import '../screens/cart_screen.dart';
-import '../screens/settings_screen.dart';
+import '../router/app_state_manager.dart';
 
 class CustomAppBar extends StatelessWidget with PreferredSizeWidget {
   final String title;
@@ -56,7 +55,7 @@ class CustomAppBar extends StatelessWidget with PreferredSizeWidget {
         showIcon ? IconButton(
             onPressed: () =>
                 Provider.of<AppStateManager>(context, listen: false)
-                      .onCartTapped(true);
+                      .onCartTapped(true),
             icon: const Icon(
               Icons.shopping_cart,
               color: Colors.white70,
@@ -64,7 +63,7 @@ class CustomAppBar extends StatelessWidget with PreferredSizeWidget {
         showIcon ? IconButton(
             onPressed: () =>
                  Provider.of<AppStateManager>(context, listen: false)
-                      .onSettingTapped(true);
+                      .onSettingTapped(true),
             icon: const Icon(
               Icons.settings,
               color: Colors.white70,

@@ -26,6 +26,8 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
+import 'package:books/router/book_pages.dart';
+
 import '../helpers/book_data.dart';
 import 'package:flutter/material.dart';
 import '../helpers/constants.dart';
@@ -37,7 +39,7 @@ import '../widgets/title_text_widget.dart';
 
 class ReadBookScreen extends StatefulWidget {
   static MaterialPage page(Book? book) {
-    return MaterialPage(
+    return MaterialPage<Page>(
       name: BookPages.readBookPath,
       key: ValueKey(BookPages.readBookPath),
       child: ReadBookScreen(bookData: book!),

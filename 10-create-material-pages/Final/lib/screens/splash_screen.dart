@@ -3,11 +3,12 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 
 import '../helpers/helper_function.dart';
+import '../router/book_pages.dart';
 import 'login_screen.dart';
 
 class SplashScreen extends StatefulWidget {
     static MaterialPage page() {
-    return MaterialPage(
+    return MaterialPage<Page>(
       name: BookPages.splashPath,
       key: ValueKey(BookPages.splashPath),
       child: const SplashScreen(),

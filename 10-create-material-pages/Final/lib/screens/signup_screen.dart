@@ -29,6 +29,7 @@
 import 'package:flutter/material.dart';
 
 import '../helpers/helper_function.dart';
+import '../router/book_pages.dart';
 import '../widgets/common_text_field.dart';
 import '../widgets/custom_app_bar.dart';
 import '../widgets/primary_button.dart';
@@ -36,7 +37,7 @@ import 'home_screen.dart';
 
 class SignupScreen extends StatefulWidget {
     static MaterialPage page() {
-    return MaterialPage(
+    return MaterialPage<Page>(
       name: BookPages.signupPath,
       key: ValueKey(BookPages.signupPath),
       child: const SignupScreen(),

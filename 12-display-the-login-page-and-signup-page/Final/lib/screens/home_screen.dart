@@ -30,12 +30,12 @@ import 'package:flutter/material.dart';
 import '../helpers/book_data.dart';
 import '../helpers/constants.dart';
 import '../helpers/helper_function.dart';
-import 'detail_screen.dart';
+import '../router/book_pages.dart';
 import '../widgets/custom_app_bar.dart';
 
 class HomeScreen extends StatefulWidget {
   static MaterialPage page() {
-    return MaterialPage(
+    return MaterialPage<Page>(
       name: BookPages.homePath,
       key: ValueKey(BookPages.homePath),
       child: const HomeScreen(),

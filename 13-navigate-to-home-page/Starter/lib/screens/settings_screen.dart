@@ -28,6 +28,7 @@
 
 import 'package:flutter/material.dart';
 import '../helpers/helper_function.dart';
+import '../router/book_pages.dart';
 import 'my_books_screen.dart';
 import '../widgets/custom_app_bar.dart';
 
@@ -37,7 +38,7 @@ import 'login_screen.dart';
 
 class SettingsScreen extends StatelessWidget {
   static MaterialPage page() {
-    return MaterialPage(
+    return MaterialPage<Page>(
       name: BookPages.settingsPath,
       key: ValueKey(BookPages.settingsPath),
       child: SettingsScreen(),

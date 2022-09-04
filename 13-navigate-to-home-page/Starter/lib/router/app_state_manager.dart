@@ -37,25 +37,23 @@ class AppStateManager extends ChangeNotifier {
     notifyListeners();
   }
 
-
   void logout() {
     _loggedIn = false;
     _onSignUpComplete = false;
     _initialised = false;
-   
+
     initislizeApp();
   }
 
-    void onCartTapped(bool value) {
+  void onCartTapped(bool value) {
     _onCart = value;
     notifyListeners();
   }
 
-    void onSettingTapped(bool value) {
+  void onSettingTapped(bool value) {
     _onSetting = value;
     notifyListeners();
   }
-
 
   void onCheckoutTapped(bool value) {
     _onCheckout = value;
@@ -67,11 +65,13 @@ class AppStateManager extends ChangeNotifier {
     notifyListeners();
   }
 
+  void onsignUpTapper(bool value) {
+    _isSignUp = value;
+    notifyListeners();
+  }
+
   void onReadBookTapped(bool value) {
     _onReadBook = value;
     notifyListeners();
   }
-
-
-
 }

@@ -30,6 +30,7 @@ import '../helpers/book_data.dart';
 import 'package:flutter/material.dart';
 import '../helpers/constants.dart';
 import '../helpers/helper_function.dart';
+import '../router/book_pages.dart';
 import '../widgets/custom_app_bar.dart';
 import '../widgets/primary_button.dart';
 import '../widgets/subtitle_text_widget.dart';
@@ -37,7 +38,7 @@ import '../widgets/title_text_widget.dart';
 
 class ReadBookScreen extends StatefulWidget {
   static MaterialPage page(Book? book) {
-    return MaterialPage(
+    return MaterialPage<Page>(
       name: BookPages.readBookPath,
       key: ValueKey(BookPages.readBookPath),
       child: ReadBookScreen(bookData: book!),

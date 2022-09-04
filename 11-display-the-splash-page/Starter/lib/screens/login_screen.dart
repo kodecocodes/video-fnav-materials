@@ -26,6 +26,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
+import 'package:books/router/book_pages.dart';
 import 'package:flutter/material.dart';
 import '../helpers/helper_function.dart';
 import 'home_screen.dart';
@@ -35,7 +36,7 @@ import '../widgets/primary_button.dart';
 
 class LoginScreen extends StatefulWidget {
     static MaterialPage page() {
-    return MaterialPage(
+    return MaterialPage<Page>(
       name: BookPages.loginPath,
       key: ValueKey(BookPages.loginPath),
       child: const LoginScreen(),

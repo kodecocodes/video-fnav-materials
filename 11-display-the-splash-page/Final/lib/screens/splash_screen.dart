@@ -1,13 +1,10 @@
-import 'dart:async';
-
 import 'package:flutter/material.dart';
-
 import '../helpers/helper_function.dart';
-import 'login_screen.dart';
+import '../router/book_pages.dart';
 
 class SplashScreen extends StatefulWidget {
     static MaterialPage page() {
-    return MaterialPage(
+    return MaterialPage<Page>(
       name: BookPages.splashPath,
       key: ValueKey(BookPages.splashPath),
       child: const SplashScreen(),
@@ -21,7 +18,7 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
-  HelperFunction _helperFunction = HelperFunction();
+  final HelperFunction _helperFunction = HelperFunction();
 
   @override
   void initState() {

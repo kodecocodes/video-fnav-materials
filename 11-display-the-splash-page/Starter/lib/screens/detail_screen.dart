@@ -27,6 +27,7 @@
 // THE SOFTWARE.
 
 import 'package:books/helpers/book_data.dart';
+import 'package:books/router/book_pages.dart';
 import 'package:flutter/material.dart';
 import '../helpers/constants.dart';
 import '../helpers/helper_function.dart';
@@ -39,7 +40,7 @@ import '../widgets/custom_app_bar.dart';
 
 class DetailsScreen extends StatefulWidget {
   static MaterialPage page({Book? book, int index = -1}) {
-    return MaterialPage(
+    return MaterialPage<Page>(
         name: BookPages.detailsPath,
         key: ValueKey(BookPages.detailsPath),
         child: DetailsScreen(

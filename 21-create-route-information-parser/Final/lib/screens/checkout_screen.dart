@@ -29,13 +29,14 @@
 import 'package:flutter/material.dart';
 import '../helpers/constants.dart';
 import '../helpers/helper_function.dart';
+import '../router/book_pages.dart';
 import '../widgets/custom_app_bar.dart';
 import '../widgets/primary_button.dart';
 import '../widgets/title_text_widget.dart';
 
 class CheckoutScreen extends StatefulWidget {
   static MaterialPage page() {
-    return MaterialPage(
+    return MaterialPage<Page>(
       name: BookPages.checkoutPath,
       key: ValueKey(BookPages.checkoutPath),
       child: const CheckoutScreen(),

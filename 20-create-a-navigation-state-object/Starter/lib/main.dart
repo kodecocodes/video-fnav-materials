@@ -27,6 +27,7 @@
 // THE SOFTWARE.
 
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'router/app_state_manager.dart';
 import 'router/book_router_delegate.dart';
 import 'helpers/book_data.dart';
@@ -61,14 +62,16 @@ class _BookState extends State<Book> {
     // TODO: Add MultiProvider
     // TODO: Switch to MaterialApp router
     return MultiProvider(
-        providers: [
-          ChangeNotifierProvider(create: (context) => _appStateManager),
-          ChangeNotifierProvider(create: (context) => _bookManager),
-        ],
-        child: MaterialApp(
-          debugShowCheckedModeBanner: false,
-          home: Router(routerDelegate: _bookRouterDelegate),
-          backButtonDispatcher: RootBackButtonDispatcher(),
-        ));
+      providers: [
+        ChangeNotifierProvider(create: (context) => _appStateManager),
+        ChangeNotifierProvider(create: (context) => _bookManager),
+      ],
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: Router(
+            routerDelegate: _bookRouterDelegate,
+            backButtonDispatcher: RootBackButtonDispatcher()),
+      ),
+    );
   }
 }

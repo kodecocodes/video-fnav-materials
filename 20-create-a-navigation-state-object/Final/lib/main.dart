@@ -27,6 +27,7 @@
 // THE SOFTWARE.
 
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'router/app_state_manager.dart';
 import 'router/book_router_delegate.dart';
 import 'helpers/book_data.dart';
@@ -67,8 +68,9 @@ class _BookState extends State<Book> {
         ],
         child: MaterialApp(
           debugShowCheckedModeBanner: false,
-          home: Router(routerDelegate: _bookRouterDelegate),
-          backButtonDispatcher: RootBackButtonDispatcher(),
+          home: Router(
+              routerDelegate: _bookRouterDelegate,
+              backButtonDispatcher: RootBackButtonDispatcher()),
         ));
   }
 }

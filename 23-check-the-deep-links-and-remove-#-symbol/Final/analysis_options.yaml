@@ -4,7 +4,6 @@ analyzer:
     - lib/**.g.dart
   strong-mode:
     implicit-casts: false
-    implicit-dynamic: false
 
   errors:
     missing_return: error

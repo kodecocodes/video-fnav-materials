@@ -27,10 +27,11 @@
 // THE SOFTWARE.
 
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import '../helpers/book_data.dart';
 import '../helpers/constants.dart';
 import '../helpers/helper_function.dart';
-import 'detail_screen.dart';
+import '../router/book_pages.dart';
 import '../widgets/custom_app_bar.dart';
 
 class HomeScreen extends StatefulWidget {

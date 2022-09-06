@@ -28,9 +28,11 @@
 
 import 'package:books/helpers/book_data.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import '../helpers/constants.dart';
 import '../helpers/helper_function.dart';
-import 'read_book_screen.dart';
+import '../router/app_state_manager.dart';
+import '../router/book_pages.dart';
 import '../widgets/primary_button.dart';
 import '../widgets/subtitle_text_widget.dart';
 import '../widgets/title_text_widget.dart';

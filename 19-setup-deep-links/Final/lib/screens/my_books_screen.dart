@@ -30,6 +30,7 @@ import 'package:flutter/material.dart';
 import '../helpers/book_data.dart';
 import '../helpers/constants.dart';
 import '../helpers/helper_function.dart';
+import '../router/book_pages.dart';
 import '../widgets/custom_app_bar.dart';
 import '../widgets/subtitle_text_widget.dart';
 import '../widgets/title_text_widget.dart';

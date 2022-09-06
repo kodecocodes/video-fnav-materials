@@ -73,6 +73,13 @@ class AppStateManager extends ChangeNotifier {
     notifyListeners();
   }
 
+  void onsignUpTapper(bool value) {
+    _isSignUp = value;
+    notifyListeners();
+  }
+
+  
+
   void onSignUpCompleted() {
     _loggedIn = true;
     _isSignUp = false;

@@ -27,13 +27,14 @@
 // THE SOFTWARE.
 
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import '../helpers/book_data.dart';
 import '../helpers/helper_function.dart';
-import 'my_books_screen.dart';
+import '../router/app_state_manager.dart';
+import '../router/book_pages.dart';
 import '../widgets/custom_app_bar.dart';
-
 import '../helpers/constants.dart';
 import '../widgets/primary_button.dart';
-import 'login_screen.dart';
 
 class SettingsScreen extends StatelessWidget {
   static MaterialPage page() {
